@@ -1,0 +1,720 @@
+{
+  "version": 1,
+  "products": [
+    {
+      "id": "ALCO-001",
+      "sku": "ALCO-001",
+      "name": "Alcool Em Gel",
+      "category": "Higiene",
+      "unit": "un",
+      "stock": 1.0,
+      "minStock": 5.0,
+      "unitCost": 1.95,
+      "isBackpack": false,
+      "active": true,
+      "notes": "",
+      "createdAt": "2026-11-12T00:00:00.000Z",
+      "updatedAt": "2026-11-12T00:00:00.000Z"
+    },
+    {
+      "id": "APIT-001",
+      "sku": "APIT-001",
+      "name": "Apito de Sinalização",
+      "category": "Equipamentos",
+      "unit": "un",
+      "stock": 10.0,
+      "minStock": 5.0,
+      "unitCost": 1.78,
+      "isBackpack": false,
+      "active": true,
+      "notes": "",
+      "createdAt": "2026-11-12T00:00:00.000Z",
+      "updatedAt": "2026-11-12T00:00:00.000Z"
+    },
+    {
+      "id": "ATAD-001",
+      "sku": "ATAD-001",
+      "name": "Atadura",
+      "category": "Primeiros socorros",
+      "unit": "un",
+      "stock": 37.0,
+      "minStock": 5.0,
+      "unitCost": 2.28,
+      "isBackpack": false,
+      "active": true,
+      "notes": "",
+      "createdAt": "2026-11-12T00:00:00.000Z",
+      "updatedAt": "2026-11-12T00:00:00.000Z"
+    },
+    {
+      "id": "CANI-001",
+      "sku": "CANI-001",
+      "name": "Canivete",
+      "category": "Equipamentos",
+      "unit": "un",
+      "stock": 5.0,
+      "minStock": 10.0,
+      "unitCost": 6.75,
+      "isBackpack": false,
+      "active": true,
+      "notes": "",
+      "createdAt": "2026-11-12T00:00:00.000Z",
+      "updatedAt": "2026-11-12T00:00:00.000Z"
+    },
+    {
+      "id": "CAP-001",
+      "sku": "CAP-001",
+      "name": "Capa de Chuva",
+      "category": "Equipamentos",
+      "unit": "un",
+      "stock": 7.0,
+      "minStock": 5.0,
+      "unitCost": 1.43,
+      "isBackpack": false,
+      "active": true,
+      "notes": "",
+      "createdAt": "2026-11-12T00:00:00.000Z",
+      "updatedAt": "2026-11-12T00:00:00.000Z"
+    },
+    {
+      "id": "CORD-001",
+      "sku": "CORD-001",
+      "name": "Corda 30 metros 5mm",
+      "category": "Equipamentos",
+      "unit": "un",
+      "stock": 1.0,
+      "minStock": 10.0,
+      "unitCost": 1.9,
+      "isBackpack": false,
+      "active": true,
+      "notes": "Confira unidade: planilha utiliza unidade para corda, mas nome indica rolo de 30m.",
+      "createdAt": "2026-11-12T00:00:00.000Z",
+      "updatedAt": "2026-11-12T00:00:00.000Z"
+    },
+    {
+      "id": "CREM-001",
+      "sku": "CREM-001",
+      "name": "Creme Dental 30g",
+      "category": "Higiene",
+      "unit": "un",
+      "stock": 0.0,
+      "minStock": 10.0,
+      "unitCost": 2.45,
+      "isBackpack": false,
+      "active": true,
+      "notes": "",
+      "createdAt": "2026-11-12T00:00:00.000Z",
+      "updatedAt": "2026-11-12T00:00:00.000Z"
+    },
+    {
+      "id": "BAND-001",
+      "sku": "BAND-001",
+      "name": "Curativo (Bandaid)",
+      "category": "Primeiros socorros",
+      "unit": "un",
+      "stock": 199.0,
+      "minStock": 5.0,
+      "unitCost": 0.21,
+      "isBackpack": false,
+      "active": true,
+      "notes": "",
+      "createdAt": "2026-11-12T00:00:00.000Z",
+      "updatedAt": "2026-11-12T00:00:00.000Z"
+    },
+    {
+      "id": "ESCO-001",
+      "sku": "ESCO-001",
+      "name": "Escova Dental",
+      "category": "Higiene",
+      "unit": "un",
+      "stock": 50.0,
+      "minStock": 5.0,
+      "unitCost": 0.5,
+      "isBackpack": false,
+      "active": true,
+      "notes": "",
+      "createdAt": "2026-11-12T00:00:00.000Z",
+      "updatedAt": "2026-11-12T00:00:00.000Z"
+    },
+    {
+      "id": "FIOD-001",
+      "sku": "FIOD-001",
+      "name": "Fio Dental",
+      "category": "Higiene",
+      "unit": "un",
+      "stock": 20.0,
+      "minStock": 5.0,
+      "unitCost": 1.4,
+      "isBackpack": false,
+      "active": true,
+      "notes": "",
+      "createdAt": "2026-11-12T00:00:00.000Z",
+      "updatedAt": "2026-11-12T00:00:00.000Z"
+    },
+    {
+      "id": "ESPA-001",
+      "sku": "ESPA-001",
+      "name": "Fita Microporosa (Esparadrapo)",
+      "category": "Primeiros socorros",
+      "unit": "un",
+      "stock": 14.0,
+      "minStock": 5.0,
+      "unitCost": 3.74,
+      "isBackpack": false,
+      "active": true,
+      "notes": "",
+      "createdAt": "2026-11-12T00:00:00.000Z",
+      "updatedAt": "2026-11-12T00:00:00.000Z"
+    },
+    {
+      "id": "SILV-001",
+      "sku": "SILV-001",
+      "name": "Fita Silver Tape (Fita de Reparo)",
+      "category": "Equipamentos",
+      "unit": "un",
+      "stock": 5.0,
+      "minStock": 10.0,
+      "unitCost": 7.4,
+      "isBackpack": false,
+      "active": true,
+      "notes": "",
+      "createdAt": "2026-11-12T00:00:00.000Z",
+      "updatedAt": "2026-11-12T00:00:00.000Z"
+    },
+    {
+      "id": "GAZE-002",
+      "sku": "GAZE-002",
+      "name": "Gaze Estéril",
+      "category": "Primeiros socorros",
+      "unit": "un",
+      "stock": 2.0,
+      "minStock": 5.0,
+      "unitCost": 0.73,
+      "isBackpack": false,
+      "active": true,
+      "notes": "",
+      "createdAt": "2026-11-12T00:00:00.000Z",
+      "updatedAt": "2026-11-12T00:00:00.000Z"
+    },
+    {
+      "id": "ISQU-001",
+      "sku": "ISQU-001",
+      "name": "Isqueiro",
+      "category": "Equipamentos",
+      "unit": "un",
+      "stock": 52.0,
+      "minStock": 10.0,
+      "unitCost": 0.99,
+      "isBackpack": false,
+      "active": true,
+      "notes": "",
+      "createdAt": "2026-11-12T00:00:00.000Z",
+      "updatedAt": "2026-11-12T00:00:00.000Z"
+    },
+    {
+      "id": "LANT-DIN-001",
+      "sku": "LANT-DIN-001",
+      "name": "Lanterna Dínamo",
+      "category": "Equipamentos",
+      "unit": "un",
+      "stock": 0.0,
+      "minStock": 5.0,
+      "unitCost": 8.42,
+      "isBackpack": false,
+      "active": true,
+      "notes": "",
+      "createdAt": "2026-11-12T00:00:00.000Z",
+      "updatedAt": "2026-11-12T00:00:00.000Z"
+    },
+    {
+      "id": "LENC-001",
+      "sku": "LENC-001",
+      "name": "Lenços Antissepticos",
+      "category": "Primeiros socorros",
+      "unit": "un",
+      "stock": 40.0,
+      "minStock": 10.0,
+      "unitCost": 0.66,
+      "isBackpack": false,
+      "active": true,
+      "notes": "",
+      "createdAt": "2026-11-12T00:00:00.000Z",
+      "updatedAt": "2026-11-12T00:00:00.000Z"
+    },
+    {
+      "id": "LUVA-001",
+      "sku": "LUVA-001",
+      "name": "Luvas Descartáveis",
+      "category": "Primeiros socorros",
+      "unit": "un",
+      "stock": 173.0,
+      "minStock": 5.0,
+      "unitCost": 0.21,
+      "isBackpack": false,
+      "active": true,
+      "notes": "",
+      "createdAt": "2026-11-12T00:00:00.000Z",
+      "updatedAt": "2026-11-12T00:00:00.000Z"
+    },
+    {
+      "id": "MANTA1",
+      "sku": "MANTA1",
+      "name": "Manta Térmica Aluminizada",
+      "category": "Primeiros socorros",
+      "unit": "un",
+      "stock": 15.0,
+      "minStock": 5.0,
+      "unitCost": 5.2,
+      "isBackpack": false,
+      "active": true,
+      "notes": "A planilha diverge: estoque atual 15 e disponível 20. Importado 15; confira.",
+      "createdAt": "2026-11-12T00:00:00.000Z",
+      "updatedAt": "2026-11-12T00:00:00.000Z"
+    },
+    {
+      "id": "MASK-001",
+      "sku": "MASK-001",
+      "name": "Máscara Descartável - KN95",
+      "category": "Primeiros socorros",
+      "unit": "un",
+      "stock": 63.0,
+      "minStock": 5.0,
+      "unitCost": 0.56,
+      "isBackpack": false,
+      "active": true,
+      "notes": "Confira o saldo físico: planilha registra consumo de 5 sem baixa de saldo.",
+      "createdAt": "2026-11-12T00:00:00.000Z",
+      "updatedAt": "2026-11-12T00:00:00.000Z"
+    },
+    {
+      "id": "MOCH-30L-001",
+      "sku": "MOCH-30L-001",
+      "name": "Mochila",
+      "category": "Geral",
+      "unit": "un",
+      "stock": 14.0,
+      "minStock": 3.0,
+      "unitCost": 29.99,
+      "isBackpack": true,
+      "active": true,
+      "notes": "",
+      "createdAt": "2026-11-12T00:00:00.000Z",
+      "updatedAt": "2026-11-12T00:00:00.000Z"
+    },
+    {
+      "id": "CLOR-001",
+      "sku": "CLOR-001",
+      "name": "Pastilha Purificadora de Água (Clorin)",
+      "category": "Primeiros socorros",
+      "unit": "un",
+      "stock": 11.0,
+      "minStock": 5.0,
+      "unitCost": 1.0,
+      "isBackpack": false,
+      "active": true,
+      "notes": "",
+      "createdAt": "2026-11-12T00:00:00.000Z",
+      "updatedAt": "2026-11-12T00:00:00.000Z"
+    },
+    {
+      "id": "SABO-001",
+      "sku": "SABO-001",
+      "name": "Sabonete",
+      "category": "Higiene",
+      "unit": "un",
+      "stock": 3.0,
+      "minStock": 5.0,
+      "unitCost": 0.66,
+      "isBackpack": false,
+      "active": true,
+      "notes": "",
+      "createdAt": "2026-11-12T00:00:00.000Z",
+      "updatedAt": "2026-11-12T00:00:00.000Z"
+    },
+    {
+      "id": "SACO-ZIP-002",
+      "sku": "SACO-ZIP-002",
+      "name": "Saco Zip Lock Hermético",
+      "category": "Equipamentos",
+      "unit": "un",
+      "stock": 69.0,
+      "minStock": 6.0,
+      "unitCost": 0.34,
+      "isBackpack": false,
+      "active": true,
+      "notes": "",
+      "createdAt": "2026-11-12T00:00:00.000Z",
+      "updatedAt": "2026-11-12T00:00:00.000Z"
+    }
+  ],
+  "kits": [
+    {
+      "id": "essencial-atual",
+      "name": "Essencial Atual",
+      "description": "Composição baseada na planilha, incluindo silver tape.",
+      "salePrice": 210,
+      "platformFeePercent": 15,
+      "extraCost": 0,
+      "components": [
+        {
+          "productId": "MANTA1",
+          "quantity": 1
+        },
+        {
+          "productId": "GAZE-002",
+          "quantity": 1
+        },
+        {
+          "productId": "BAND-001",
+          "quantity": 2
+        },
+        {
+          "productId": "LUVA-001",
+          "quantity": 4
+        },
+        {
+          "productId": "ATAD-001",
+          "quantity": 1
+        },
+        {
+          "productId": "LENC-001",
+          "quantity": 2
+        },
+        {
+          "productId": "MASK-001",
+          "quantity": 1
+        },
+        {
+          "productId": "ESPA-001",
+          "quantity": 1
+        },
+        {
+          "productId": "SACO-ZIP-002",
+          "quantity": 3
+        },
+        {
+          "productId": "ESCO-001",
+          "quantity": 1
+        },
+        {
+          "productId": "CREM-001",
+          "quantity": 1
+        },
+        {
+          "productId": "SABO-001",
+          "quantity": 1
+        },
+        {
+          "productId": "FIOD-001",
+          "quantity": 1
+        },
+        {
+          "productId": "ALCO-001",
+          "quantity": 1
+        },
+        {
+          "productId": "APIT-001",
+          "quantity": 1
+        },
+        {
+          "productId": "LANT-DIN-001",
+          "quantity": 1
+        },
+        {
+          "productId": "CAP-001",
+          "quantity": 1
+        },
+        {
+          "productId": "CORD-001",
+          "quantity": 1
+        },
+        {
+          "productId": "SILV-001",
+          "quantity": 1
+        },
+        {
+          "productId": "ISQU-001",
+          "quantity": 1
+        },
+        {
+          "productId": "CANI-001",
+          "quantity": 1
+        },
+        {
+          "productId": "CLOR-001",
+          "quantity": 1
+        },
+        {
+          "productId": "MOCH-30L-001",
+          "quantity": 1
+        }
+      ],
+      "updatedAt": "2026-11-12T00:00:00.000Z"
+    },
+    {
+      "id": "essencial-futuro",
+      "name": "Essencial Futuro",
+      "description": "Projeção sem silver tape. Edite livremente os componentes.",
+      "salePrice": 210,
+      "platformFeePercent": 15,
+      "extraCost": 0,
+      "components": [
+        {
+          "productId": "MANTA1",
+          "quantity": 1
+        },
+        {
+          "productId": "GAZE-002",
+          "quantity": 1
+        },
+        {
+          "productId": "BAND-001",
+          "quantity": 2
+        },
+        {
+          "productId": "LUVA-001",
+          "quantity": 4
+        },
+        {
+          "productId": "ATAD-001",
+          "quantity": 1
+        },
+        {
+          "productId": "LENC-001",
+          "quantity": 2
+        },
+        {
+          "productId": "MASK-001",
+          "quantity": 1
+        },
+        {
+          "productId": "ESPA-001",
+          "quantity": 1
+        },
+        {
+          "productId": "SACO-ZIP-002",
+          "quantity": 3
+        },
+        {
+          "productId": "ESCO-001",
+          "quantity": 1
+        },
+        {
+          "productId": "CREM-001",
+          "quantity": 1
+        },
+        {
+          "productId": "SABO-001",
+          "quantity": 1
+        },
+        {
+          "productId": "FIOD-001",
+          "quantity": 1
+        },
+        {
+          "productId": "ALCO-001",
+          "quantity": 1
+        },
+        {
+          "productId": "APIT-001",
+          "quantity": 1
+        },
+        {
+          "productId": "LANT-DIN-001",
+          "quantity": 1
+        },
+        {
+          "productId": "CAP-001",
+          "quantity": 1
+        },
+        {
+          "productId": "CORD-001",
+          "quantity": 1
+        },
+        {
+          "productId": "ISQU-001",
+          "quantity": 1
+        },
+        {
+          "productId": "CANI-001",
+          "quantity": 1
+        },
+        {
+          "productId": "CLOR-001",
+          "quantity": 1
+        },
+        {
+          "productId": "MOCH-30L-001",
+          "quantity": 1
+        }
+      ],
+      "updatedAt": "2026-11-12T00:00:00.000Z"
+    },
+    {
+      "id": "personalizado",
+      "name": "Personalizado",
+      "description": "Terceiro cenário para testar novos kits e custos.",
+      "salePrice": 210,
+      "platformFeePercent": 15,
+      "extraCost": 0,
+      "components": [
+        {
+          "productId": "MANTA1",
+          "quantity": 1
+        },
+        {
+          "productId": "GAZE-002",
+          "quantity": 1
+        },
+        {
+          "productId": "BAND-001",
+          "quantity": 2
+        },
+        {
+          "productId": "LUVA-001",
+          "quantity": 4
+        },
+        {
+          "productId": "ATAD-001",
+          "quantity": 1
+        },
+        {
+          "productId": "LENC-001",
+          "quantity": 2
+        },
+        {
+          "productId": "MASK-001",
+          "quantity": 1
+        },
+        {
+          "productId": "ESPA-001",
+          "quantity": 1
+        },
+        {
+          "productId": "SACO-ZIP-002",
+          "quantity": 3
+        },
+        {
+          "productId": "ESCO-001",
+          "quantity": 1
+        },
+        {
+          "productId": "CREM-001",
+          "quantity": 1
+        },
+        {
+          "productId": "SABO-001",
+          "quantity": 1
+        },
+        {
+          "productId": "FIOD-001",
+          "quantity": 1
+        },
+        {
+          "productId": "ALCO-001",
+          "quantity": 1
+        },
+        {
+          "productId": "APIT-001",
+          "quantity": 1
+        },
+        {
+          "productId": "LANT-DIN-001",
+          "quantity": 1
+        },
+        {
+          "productId": "CAP-001",
+          "quantity": 1
+        },
+        {
+          "productId": "CORD-001",
+          "quantity": 1
+        },
+        {
+          "productId": "SILV-001",
+          "quantity": 1
+        },
+        {
+          "productId": "ISQU-001",
+          "quantity": 1
+        },
+        {
+          "productId": "CANI-001",
+          "quantity": 1
+        },
+        {
+          "productId": "CLOR-001",
+          "quantity": 1
+        },
+        {
+          "productId": "MOCH-30L-001",
+          "quantity": 1
+        }
+      ],
+      "updatedAt": "2026-11-12T00:00:00.000Z"
+    }
+  ],
+  "finishedKits": {
+    "essencial-atual": 0,
+    "essencial-futuro": 0,
+    "personalizado": 0
+  },
+  "movements": [],
+  "pendingPurchases": [
+    {
+      "id": "pend-ALCO-001",
+      "productId": "ALCO-001",
+      "quantity": 6,
+      "expectedDate": null,
+      "note": "Anotação: álcool gel +6; entrega prevista 28–29/10 (confirmar).",
+      "status": "pendente",
+      "createdAt": "2026-11-12T00:00:00.000Z"
+    },
+    {
+      "id": "pend-CAP-001",
+      "productId": "CAP-001",
+      "quantity": 10,
+      "expectedDate": null,
+      "note": "Anotação: capa de chuva +10; entrega prevista 27/10 (confirmar).",
+      "status": "pendente",
+      "createdAt": "2026-11-12T00:00:00.000Z"
+    },
+    {
+      "id": "pend-SILV-001",
+      "productId": "SILV-001",
+      "quantity": 10,
+      "expectedDate": null,
+      "note": "Anotação: silver tape +10; entrega prevista 28–31/10 (confirmar).",
+      "status": "pendente",
+      "createdAt": "2026-11-12T00:00:00.000Z"
+    },
+    {
+      "id": "pend-ESPA-001",
+      "productId": "ESPA-001",
+      "quantity": 12,
+      "expectedDate": null,
+      "note": "Anotação: microporosa +12; entrega prevista 31/10–03/11 (confirmar).",
+      "status": "pendente",
+      "createdAt": "2026-11-12T00:00:00.000Z"
+    },
+    {
+      "id": "pend-LANT-DIN-001",
+      "productId": "LANT-DIN-001",
+      "quantity": 5,
+      "expectedDate": null,
+      "note": "Anotação: lanterna +5; entrega prevista 31/10–03/11 (confirmar).",
+      "status": "pendente",
+      "createdAt": "2026-11-12T00:00:00.000Z"
+    },
+    {
+      "id": "pend-LUVA-001",
+      "productId": "LUVA-001",
+      "quantity": 100,
+      "expectedDate": null,
+      "note": "Anotação: luvas +100; entrega prevista 28–29/10 (confirmar).",
+      "status": "pendente",
+      "createdAt": "2026-11-12T00:00:00.000Z"
+    }
+  ],
+  "updatedAt": "2026-11-12T00:00:00.000Z"
+}

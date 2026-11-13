@@ -1,0 +1,4 @@
+Os dados da aplicação serão criados automaticamente nesta pasta em estoque.json.
+Não exclua o arquivo estoque.json após usar o sistema.
+O diretório backups/ é criado automaticamente.
+Use o botão "Exportar backup" na interface para salvar uma cópia extra.
