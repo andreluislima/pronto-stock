@@ -1,6 +1,8 @@
 # Pronto Stock · Gestão de Estoque
 
-Sistema web local para a **Pronto Supply e Soluções**. Interface minimalista em React + TypeScript, API Node.js/Express em TypeScript e persistência em arquivos JSON **no próprio computador**. Criado a partir de `Atual(revisada) - Gestão Estoque.xlsx`.
+Sistema web para a **Pronto Supply e Soluções**. Interface em React + JSX, API Node.js/Express em TypeScript e persistência em PostgreSQL (Neon). Criado a partir de `Atual(revisada) - Gestão Estoque.xlsx`.
+
+> Configure primeiro a conexão e a importação conforme [NEON.md](NEON.md). A API precisa de acesso ao banco; o JSON não é mais atualizado pela aplicação.
 
 ## Como abrir no Windows (mais fácil)
 
@@ -23,7 +25,7 @@ npm run dev
 
 - **Sistema web:** http://localhost:5173
 - **API:** http://localhost:3333/api/health
-- **Armazenamento:** `server/data/estoque.json` (criado automaticamente na primeira execução)
+- **Armazenamento:** PostgreSQL, schema `pronto_stock`
 
 ### Para executar como versão de produção
 
@@ -36,24 +38,11 @@ Abra http://localhost:3333. Nesta modalidade, a API também serve a aplicação 
 
 ## Onde ficam os dados?
 
-O arquivo principal é **`server/data/estoque.json`**. Ele mantém:
+Os dados ficam nas tabelas relacionais do PostgreSQL (Neon). Cada alteração é transacional e uma cópia diária é gravada em `inventory_backups`. A restauração salva uma cópia independente antes da troca.
 
-- Produtos, categorias, quantidade física, mínimo e custos unitários;
-- Compras em trânsito (pendentes, recebidas ou canceladas);
-- Entradas, saídas, montagens e vendas com datas;
-- Três modelos de kit e suas composições;
-- Quantidade de kits prontos de cada modelo.
+O menu **Exportar backup** baixa um JSON com o estado completo. **Restaurar backup** valida o JSON e grava as tabelas em uma transação. O arquivo legado `server/data/estoque.json` permanece apenas como fonte de importação e cópia histórica.
 
-**Não é localStorage:** os dados são gravados pelo servidor em um arquivo real no computador, com gravação atômica (arquivo temporário + renomeação). Também é criada uma cópia diária anterior à primeira alteração em `server/data/backups/`. O menu **Exportar backup** permite salvar um JSON em outro local, e **Restaurar backup** importa esse JSON e salva uma cópia de segurança antes da troca.
-
-Para guardar dados fora do diretório do projeto, configure a variável `DATA_DIR` antes de iniciar:
-
-```powershell
-$env:DATA_DIR = 'D:\ProntoSupply\DadosEstoque'
-npm run dev
-```
-
-Esse comando vale para a janela de terminal atual. Para execução posterior, configure a variável novamente ou crie seu próprio atalho. Evite diretórios sincronizados por OneDrive para reduzir a possibilidade de conflitos de escrita.
+Consulte [NEON.md](NEON.md) para migração, importação, testes e estrutura do banco.
 
 ## Funcionalidades
 
@@ -132,11 +121,11 @@ npm test
 npm run build
 ```
 
-**Nota de validação:** o código foi analisado sintaticamente e as regras puras de capacidade/custo foram testadas. Não foi possível executar a instalação npm nem iniciar a interface completa no ambiente de geração porque o acesso a `registry.npmjs.org` estava indisponível. Execute os comandos acima após instalar as dependências no seu computador e consulte eventuais mensagens do terminal.
+**Validação:** execute `npm run build`. Os testes de integração (`npm test`) exigem a branch isolada descrita em NEON.md.
 
 ## Preparado para a versão futura
 
-O frontend já está separado das regras de inventário pela API. Quando quiser migrar para **Java 17 + Spring Boot + PostgreSQL**, é possível substituir a API local, manter as telas React e reaproveitar os contratos de dados. Para uso em rede por vários usuários será necessário acrescentar autenticação, perfis, controle transacional no banco e trilha de auditoria mais detalhada.
+O frontend já está separado das regras de inventário pela API. Quando quiser migrar para **Java 17 + Spring Boot**, é possível substituir a API local, manter as telas React e reaproveitar os contratos de dados. Para uso em rede por vários usuários será necessário acrescentar autenticação, perfis, controle transacional no banco e trilha de auditoria mais detalhada.
 
 ### Regras de segurança da versão local
 

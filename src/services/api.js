@@ -9,7 +9,7 @@ export async function loadState() {
   const response = await fetch(API_URL + "/state", { cache: "no-store" });
   if (!response.ok)
     throw new Error(
-      "Não foi possível acessar a API local. Verifique se o servidor está ligado.",
+      "Não foi possível acessar a API. Verifique sua conexão e tente novamente.",
     );
   return response.json();
 }

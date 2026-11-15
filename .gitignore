@@ -4,3 +4,7 @@ server/data/*.json
 server/data/*.tmp
 server/data/backups/
 .env
+.env.*
+!.env.example
+.neon/
+.neon

@@ -97,7 +97,7 @@ export function App() {
     ? "Desconectado"
     : loading
       ? "Conectando"
-      : "Dados salvos localmente";
+      : "Dados salvos no banco";
   return (
     <div className={`app-shell ${collapsed ? "sidebar-collapsed" : ""}`}>
       {mobileOpen && (
@@ -157,7 +157,7 @@ export function App() {
             {!collapsed && (
               <>
                 <strong>Seus dados, suas regras.</strong>
-                <p>Arquivos gravados apenas neste computador.</p>
+                <p>Estoque protegido com histórico e backups.</p>
               </>
             )}
           </div>
@@ -269,8 +269,7 @@ export function App() {
                   Pronto Stock <b>v1.0</b>
                 </span>
                 <span>
-                  <Activity size={14} /> Operação local com histórico
-                  persistente
+                  <Activity size={14} /> Estoque com histórico persistente
                 </span>
               </div>
             </AppContext.Provider>
