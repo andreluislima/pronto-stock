@@ -3,6 +3,7 @@ import { loadState, subscribeToChanges } from "../services/api";
 
 // Coordena carregamento, atualizações e mensagens compartilhadas pelas telas.
 export function useInventory() {
+  const [authRequired, setAuthRequired] = useState(false);
   const [data, setData] = useState(null);
   const [error, setError] = useState("");
   const [notification, setNotification] = useState(null);
@@ -20,8 +21,13 @@ export function useInventory() {
     try {
       const state = await loadState();
       setData(state);
+      setAuthRequired(false);
       setError("");
     } catch (e) {
+      if (e.status === 401) {
+        setData(null);
+        setAuthRequired(true);
+      }
       setError(e instanceof Error ? e.message : String(e));
     } finally {
       setLoading(false);
@@ -56,6 +62,7 @@ export function useInventory() {
   );
 
   return {
+    authRequired,
     data,
     error,
     loading,

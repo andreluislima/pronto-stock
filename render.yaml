@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: pronto-stock-api
+    runtime: node
+    plan: free
+    branch: homolog
+    buildCommand: npm ci --include=dev && npm run build:api
+    startCommand: npm run start:api
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: 22.21.1
+      - key: HOST
+        value: 0.0.0.0
+      - key: ALLOWED_ORIGINS
+        value: https://andreluislima.github.io
+      - key: DATABASE_URL
+        sync: false
+      - key: API_ACCESS_KEY
+        generateValue: true

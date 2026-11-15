@@ -2536,3 +2536,7 @@ tbody tr:hover {
 [data-theme="dark"] .check-line input { accent-color: #ff974f; }
 [data-theme="dark"] :is(button,a,input,select,textarea):focus-visible { outline: 2px solid #ff974f; outline-offset: 3px; }
 [data-theme="dark"] ::selection { background: #ff974f; color: #092236; }
+.access-page { min-height: 100vh; display: grid; place-items: center; padding: 24px; }
+.access-page form { width: min(100%, 420px); }
+.access-page h1 { font-size: 26px; }
+.access-page p { font-size: 13px; line-height: 1.6; }

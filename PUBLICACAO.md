@@ -26,9 +26,7 @@ Essa URL é pública e não deve conter senhas ou tokens.
 
 A API deve aceitar a origem `https://andreluislima.github.io` via CORS e manter os
 contratos atuais, incluindo `/state`, `/events` e as operações de escrita.
-O backend atual é local: em produção desativa CORS e escuta em `127.0.0.1`.
-Antes de hospedá-lo, será necessário adaptar a configuração de rede
-e autenticação. Não basta mudar a URL do frontend.
+A API está preparada para o Render. Siga [RENDER.md](RENDER.md) para configurar o serviço, a conexão Neon e a chave de acesso.
 
 Para conferir o mesmo build localmente:
 

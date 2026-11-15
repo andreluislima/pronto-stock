@@ -8,3 +8,4 @@ server/data/backups/
 !.env.example
 .neon/
 .neon
+build/

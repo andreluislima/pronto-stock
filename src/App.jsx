@@ -23,7 +23,8 @@ import {
   ShieldCheck,
   X,
 } from "lucide-react";
-import { backupUrl } from "./services/api";
+import { downloadBackup, setAccessKey } from "./services/api";
+import { AccessForm } from "./componentes/AccessForm";
 import { AppContext } from "./context";
 import { Dashboard } from "./pages/Dashboard";
 import { Products } from "./pages/Products";
@@ -60,6 +61,7 @@ export function App() {
   const { theme, toggleTheme } = useTheme();
   const {
     data,
+    authRequired,
     error,
     loading,
     notification,
@@ -98,6 +100,15 @@ export function App() {
     : loading
       ? "Conectando"
       : "Dados salvos no banco";
+  if (authRequired)
+    return (
+      <AccessForm
+        onSubmit={async (key) => {
+          setAccessKey(key);
+          await refresh();
+        }}
+      />
+    );
   return (
     <div className={`app-shell ${collapsed ? "sidebar-collapsed" : ""}`}>
       {mobileOpen && (
@@ -163,9 +174,16 @@ export function App() {
           </div>
           {!collapsed && (
             <>
-              <a className="sidebar-secondary" href={backupUrl} download>
+              <button
+                className="sidebar-secondary"
+                onClick={() =>
+                  downloadBackup().catch((error) =>
+                    notify(error.message, "error"),
+                  )
+                }
+              >
                 <Download size={17} /> Exportar backup
-              </a>
+              </button>
               <button
                 className="sidebar-secondary"
                 onClick={() => restoreRef.current?.click()}

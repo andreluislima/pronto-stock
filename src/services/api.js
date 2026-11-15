@@ -1,31 +1,60 @@
-export const API_URL = import.meta.env.VITE_API_URL || "/api";
-export const backupUrl = API_URL + "/backup";
-export function subscribeToChanges(callback) {
-  const stream = new EventSource(API_URL + "/events");
-  stream.addEventListener("changed", callback);
-  return () => stream.close();
+export const API_URL = (import.meta.env.VITE_API_URL || "/api").replace(
+  /\/$/,
+  "",
+);
+let accessKey = "";
+export function setAccessKey(value) {
+  accessKey = value;
 }
-export async function loadState() {
-  const response = await fetch(API_URL + "/state", { cache: "no-store" });
-  if (!response.ok)
-    throw new Error(
-      "Não foi possível acessar a API. Verifique sua conexão e tente novamente.",
-    );
-  return response.json();
-}
-export async function updateState(path, body, method = "POST") {
+
+async function request(path, options = {}) {
   const response = await fetch(API_URL + path, {
-    method,
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(body),
+    ...options,
+    headers: {
+      ...options.headers,
+      ...(accessKey ? { Authorization: "Bearer " + accessKey } : {}),
+    },
   });
   if (!response.ok) {
-    const error = await response
-      .json()
-      .catch(() => ({ error: `Erro HTTP ${response.status}` }));
-    throw new Error(error.error || `Erro HTTP ${response.status}`);
+    const body = await response.json().catch(() => ({}));
+    const error = new Error(
+      body.error || "Não foi possível acessar a API. Tente novamente.",
+    );
+    error.status = response.status;
+    throw error;
   }
-  return response.json();
+  return response;
+}
+export function subscribeToChanges(callback) {
+  // Polling permite autenticar cada atualização sem colocar a chave na URL de SSE.
+  const timer = window.setInterval(() => {
+    if (!document.hidden) void callback();
+  }, 30000);
+  return () => window.clearInterval(timer);
+}
+export async function loadState() {
+  return (await request("/state", { cache: "no-store" })).json();
+}
+export async function updateState(path, body, method = "POST") {
+  return (
+    await request(path, {
+      method,
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    })
+  ).json();
+}
+export async function downloadBackup() {
+  const response = await request("/backup");
+  const url = URL.createObjectURL(await response.blob());
+  const anchor = document.createElement("a");
+  anchor.href = url;
+  anchor.download =
+    "pronto-stock-" + new Date().toISOString().slice(0, 10) + ".json";
+  document.body.append(anchor);
+  anchor.click();
+  anchor.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 export function downloadCsv(name, rows) {
   const csv =
