@@ -3,6 +3,7 @@ import { app } from "./app.js";
 import { initStore } from "./store.js";
 import { closeDatabase } from "./database.js";
 import { validateHttpConfig } from "./config/http.js";
+import { startupErrorMessage } from "./config/startup-error.js";
 
 try {
   validateHttpConfig();
@@ -30,9 +31,9 @@ try {
   }
   process.once("SIGTERM", shutdown);
   process.once("SIGINT", shutdown);
-} catch {
+} catch (error) {
   console.error(
-    "Falha ao iniciar a API. Confira DATABASE_URL, API_ACCESS_KEY, ALLOWED_ORIGINS, PORT e a migração do banco.",
+    "Falha ao iniciar a API: " + startupErrorMessage(error),
   );
   await closeDatabase();
   process.exitCode = 1;
